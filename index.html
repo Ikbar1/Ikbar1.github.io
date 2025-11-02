@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asyam Ikbar Ariyanto — Portfolio</title>
+  <meta name="description" content="Portfolio and past work — Web & Mobile Developer focused on Flutter, React, and IoT integrations." />
+  <meta property="og:title" content="Portfolio — Asyam Ikbar Ariyanto" />
+  <meta property="og:description" content="Selected projects, skills, and contact information." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og.png" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    /* ====== Base tokens ====== */
+    :root{
+      --bg: #0b0e13;         /* dark background */
+      --surface: #121723;    /* card background */
+      --text: #e7ecf3;       /* main text */
+      --muted: #a5b0c2;      /* secondary text */
+      --brand: #7c9cff;      /* accent */
+      --border: #242b3a;     /* borders */
+      --ring: rgba(124,156,255,.35);
+      --radius: 16px;
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f7f9fc;
+        --surface:#ffffff;
+        --text:#0b1020;
+        --muted:#5b667a;
+        --brand:#355cff;
+        --border:#e6e9f2;
+        --ring: rgba(53,92,255,.2);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg); color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin-inline:auto; padding:24px}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:24px; padding:8px 0}
+    .nav a.logo{font-weight:800; letter-spacing:.3px}
+    .nav .links{display:flex; gap:14px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid var(--border); border-radius:10px; text-decoration:none}
+    .btn:hover{box-shadow:0 0 0 4px var(--ring)}
+
+    /* hero */
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:28px 0 10px}
+    .hero .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px}
+    .hero h1{font-size:clamp(28px, 4vw, 44px); line-height:1.15; margin:0 0 10px}
+    .hero p{color:var(--muted); margin:0 0 18px}
+    .badges{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 6px}
+    .badge{padding:6px 10px; border:1px solid var(--border); border-radius:999px; font-size:13px; color:var(--muted)}
+    .avatar{width:100%; aspect-ratio:1/1; border-radius:var(--radius); object-fit:cover; border:1px solid var(--border)}
+
+    /* section */
+    section{padding:18px 0}
+    .section-title{display:flex; align-items:center; justify-content:space-between; margin:6px 0 14px}
+    .section-title h2{font-size:22px; margin:0}
+    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:16px}
+
+    /* project cards */
+    .project{grid-column: span 6; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column}
+    .project img{width:100%; height:180px; object-fit:cover; background:#0a0a0a}
+    .project .content{padding:16px}
+    .project h3{margin:0 0 6px; font-size:18px}
+    .project p{margin:0 0 10px; color:var(--muted)}
+    .chip{display:inline-block; padding:4px 8px; border:1px solid var(--border); border-radius:999px; font-size:12px; color:var(--muted); margin-right:6px}
+    .project .actions{margin-top:auto; padding:12px 16px; display:flex; gap:10px}
+    .link{border:1px solid var(--border); padding:8px 12px; border-radius:10px; text-decoration:none; display:inline-block}
+    .link:hover{box-shadow:0 0 0 4px var(--ring)}
+
+    /* experience */
+    .exp{grid-column: span 12; display:grid; grid-template-columns: 1fr 3fr; gap:16px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px}
+    .exp small{color:var(--muted)}
+
+    /* footer */
+    footer{margin:28px 0 12px; color:var(--muted); font-size:14px}
+
+    /* responsive */
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      .project{grid-column: span 12}
+      .exp{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      <a class="logo" href="#">Asyam Ikbar Ariyanto</a>
+      <div class="links">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://github.com/Ikbar1">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <h1>Web & Mobile Developer focused on Flutter, React, and IoT Integration</h1>
+        <p>I build practical web and mobile applications, including internal systems and IoT-based solutions. I’m comfortable working end-to-end—from UI development to API and database integration—and implementing real-time communication using MQTT. I care about efficient, reliable, and easy-to-use products.</p>
+        <div class="badges">
+          <span class="badge">Flutter</span>
+          <span class="badge">React</span>
+          <span class="badge">Java</span>
+          <span class="badge">MySQL / PostgreSQL</span>
+          <span class="badge">MQTT</span>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:10px">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+      <img class="avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1000&auto=format&fit=crop" alt="Profile photo"/>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <h2>Selected Projects</h2>
+        <small class="muted">Highlights from client and personal work</small>
+      </div>
+      <div class="grid" id="projectGrid"><!-- Cards injected by JS --></div>
+    </section>
+
+    <section id="experience">
+      <div class="section-title"><h2>Experience</h2></div>
+      <div class="grid">
+        <div class="exp">
+          <div>
+            <h3>Freelance Developer</h3>
+            <small>2023 — Present</small>
+          </div>
+          <div>
+            <p>Built internal web/mobile apps including IoT integrations (MQTT), scoring system (Flutter), and institutional websites. Focus on modular architecture, accessibility, and SEO best practices.</p>
+          </div>
+        </div>
+        <div class="exp">
+          <div>
+            <h3>Foundations & Companies (Formal Roles)</h3>
+            <small>2021 — 2023</small>
+          </div>
+          <div>
+            <p>Maintained institutional websites, automated reports, and handled light server maintenance. Worked cross-functionally with clear SOPs and timelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <div class="grid">
+        <div class="exp">
+          <div>
+            <h3>Email</h3>
+            <small>Fast response</small>
+          </div>
+          <div>
+            <p>Reach me at <a href="mailto:asyamikbar@gmail.com">asyamikbar@gmail.com</a> or via <a href="https://github.com/Ikbar1" target="_blank" rel="noopener">GitHub</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Asyam Ikbar Ariyanto. Built with pure HTML/CSS & GitHub Pages.
+    </footer>
+  </main>
+
+  <script>
+    // ==== Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ==== Project data
+    const projects = [
+      {
+        title: 'VoST (Volleyball Statistic Team)',
+        desc: 'Flutter-based volleyball scoring app with SQLite, supporting real-time event tracking, team line-up management, and data export to PDF and Excel for match reporting.',
+        image: 'https://images.unsplash.com/photo-1521417531771-5a0d0c0973e8?q=80&w=1200&auto=format&fit=crop',
+        tags: ['Flutter', 'SQLite', 'PDF', 'Excel Export'],
+        link: '#',
+        code: '#'
+      },
+      {
+        title: 'Ranusa Automation Website',
+        desc: 'Corporate website built with WordPress for Ranusa Automation, featuring product showcase, service details, and contact integration.',
+        image: 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1200&auto=format&fit=crop',
+        tags: ['WordPress', 'SEO', 'Corporate Website'],
+        link: 'https://ranusa-automation.com',
+        code: ''
+      },
+      {
+        title: 'Yayasan Al Amanah Al Khoeriyah Website',
+        desc: 'Institutional website developed with WordPress for Al Amanah Al Khoeriyah Foundation, focusing on school information, news updates, and SEO optimization.',
+        image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop',
+        tags: ['WordPress', 'SEO', 'Education'],
+        link: 'https://alamanahalkhoeriyah.com',
+        code: ''
+      },
+      {
+        title: 'Pondok Pesantren Al Amanah Al Islami Website',
+        desc: 'Official website for Al Amanah Al Islami Islamic Boarding School built with WordPress, providing academic programs, news, and contact information.',
+        image: 'https://images.unsplash.com/photo-1533669955142-4cfd658a3be5?q=80&w=1200&auto=format&fit=crop',
+        tags: ['WordPress', 'SEO', 'Education'],
+        link: 'https://alamanahalislami.sch.id',
+        code: ''
+      },
+      {
+        title: 'Water Monitoring App',
+        desc: 'IoT-based water monitoring application built with Flutter, MQTT, and Firebase. Enables real-time data visualization and device control for water systems.',
+        image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1200&auto=format&fit=crop',
+        tags: ['Flutter', 'MQTT', 'Firebase', 'IoT'],
+        link: '#',
+        code: '#'
+      }
+    ];
+
+    // Helper: choose label based on tags or link
+    function primaryLabel(p){
+      if (!p.link || p.link === '#') return 'View App';
+      if (p.tags && p.tags.map(t => t.toLowerCase()).includes('wordpress')) return 'Visit Site';
+      return 'View App';
+    }
+
+    const grid = document.getElementById('projectGrid');
+    projects.forEach(p=>{
+      const el = document.createElement('article');
+      el.className = 'project';
+      el.innerHTML = `
+        <img src="${p.image}" alt="${p.title}" loading="lazy"/>
+        <div class="content">
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+          <div>${(p.tags || []).map(t=>`<span class='chip'>${t}</span>`).join('')}</div>
+        </div>
+        <div class="actions">
+          ${p.link ? `<a class="link" target="_blank" rel="noopener" href="${p.link}">${primaryLabel(p)}</a>` : ''}
+          ${p.code ? `<a class="link" target="_blank" rel="noopener" href="${p.code}">Source Code</a>` : ''}
+        </div>
+      `;
+      grid.appendChild(el);
+    });
+  </script>
+
+  <!-- Structured Data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Asyam Ikbar Ariyanto",
+    "url": "https://Ikbar1.github.io/",
+    "jobTitle": "Web & Mobile Developer",
+    "knowsAbout": ["Flutter","React","Java","MySQL","PostgreSQL","MQTT","WordPress"],
+    "sameAs": [
+      "https://github.com/Ikbar1"
+    ]
+  }
+  </script>
+</body>
+</html>
