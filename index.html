@@ -1,211 +1,258 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asyam Ikbar Ariyanto — Portfolio</title>
-  <meta name="description" content="Portfolio and past work — Web & Mobile Developer focused on Flutter, React, and IoT integrations." />
-  <meta property="og:title" content="Portfolio — Asyam Ikbar Ariyanto" />
-  <meta property="og:description" content="Selected projects, skills, and contact information." />
+  <meta name="theme-color" content="#10110f" />
+  <title>Asyam Ikbar Ariyanto — Android & Web Developer</title>
+  <meta name="description" content="Portfolio of Asyam Ikbar Ariyanto, an Android and web developer building thoughtful offline-first apps for learning, fitness, and daily life." />
+  <meta property="og:title" content="Asyam Ikbar Ariyanto — Android & Web Developer" />
+  <meta property="og:description" content="Thoughtful Android apps for learning, fitness, faith, and everyday routines." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og.png" />
-  <link rel="icon" href="/favicon.ico" />
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: { bg:'#0b0e13', surface:'#121723', border:'#242b3a' }
-        }
-      }
+  <meta property="og:url" content="https://ikbar1.github.io/" />
+  <meta property="og:image" content="https://ikbar1.github.io/images/mandarinku-cover.jpg" />
+  <link rel="canonical" href="https://ikbar1.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23d8ff55%22/><path d=%22M18 18h9v28h-9zm19 0h9v28h-9zM27 29h10v8H27z%22 fill=%22%2310110f%22/></svg>" />
+  <style>
+    :root {
+      --ink: #10110f; --paper: #f3f0e8; --paper-2: #e8e4d9; --muted: #696b64;
+      --line: rgba(16, 17, 15, .16); --acid: #d8ff55; --orange: #ff7043;
+      --lavender: #cdbdfb; --green: #176b56; --white: #fffdf7;
+      --radius: 28px; --max: 1180px;
     }
-  </script>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      position: fixed; inset: 0; z-index: -1; content: ""; pointer-events: none; opacity: .2;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    ::selection { color: var(--ink); background: var(--acid); }
+    .skip-link { position: fixed; top: 12px; left: 12px; z-index: 100; padding: 10px 16px; border-radius: 999px; background: var(--acid); transform: translateY(-160%); transition: transform .2s ease; }
+    .skip-link:focus { transform: translateY(0); }
+    .container { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 18px; font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { width: 28px; height: 2px; content: ""; background: currentColor; }
+    header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid transparent; background: rgba(243, 240, 232, .86); backdrop-filter: blur(18px); transition: border-color .2s ease; }
+    header.scrolled { border-color: var(--line); }
+    nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 850; letter-spacing: -.02em; }
+    .brand-mark { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid var(--ink); border-radius: 12px; background: var(--acid); box-shadow: 3px 3px 0 var(--ink); font-size: .92rem; }
+    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-links a { padding: 9px 14px; border-radius: 999px; text-decoration: none; font-size: .9rem; font-weight: 680; }
+    .nav-links a:hover { background: var(--paper-2); }
+    .nav-links .nav-cta { border: 1px solid var(--ink); background: var(--ink); color: var(--white); }
+    .nav-links .nav-cta:hover { background: var(--green); }
+    .hero { padding: 86px 0 84px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr); gap: 64px; align-items: center; }
+    .hero h1 { max-width: 760px; margin: 0; font-size: clamp(3.7rem, 8vw, 7.6rem); font-weight: 860; letter-spacing: -.075em; line-height: .87; }
+    .hero h1 em { position: relative; color: var(--green); font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
+    .hero h1 em::after { position: absolute; right: 0; bottom: -.04em; left: .05em; height: .12em; border-radius: 999px; background: var(--acid); content: ""; transform: rotate(-2deg); z-index: -1; }
+    .hero-copy { max-width: 620px; margin: 30px 0 0; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.28rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 20px; border: 1px solid var(--ink); border-radius: 999px; text-decoration: none; font-size: .92rem; font-weight: 780; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-3px); box-shadow: 4px 4px 0 var(--ink); }
+    .button.primary { background: var(--ink); color: var(--white); }
+    .arrow { transition: transform .2s ease; }
+    .button:hover .arrow { transform: translateX(4px); }
+    .hero-stage { position: relative; min-height: 520px; }
+    .stage-orbit { position: absolute; inset: 36px 0 0 44px; border: 1px dashed rgba(16,17,15,.25); border-radius: 50%; transform: rotate(-12deg); }
+    .mini-phone { position: absolute; width: 185px; aspect-ratio: 9 / 18.5; overflow: hidden; border: 5px solid var(--ink); border-radius: 33px; background: var(--white); box-shadow: 14px 18px 0 rgba(16,17,15,.14); }
+    .mini-phone::before { position: absolute; top: 8px; left: 50%; z-index: 4; width: 52px; height: 13px; border-radius: 999px; background: var(--ink); content: ""; transform: translateX(-50%); }
+    .mini-phone img { width: 100%; height: 100%; object-fit: cover; }
+    .phone-one { top: 34px; left: 20px; transform: rotate(-9deg); }
+    .phone-two { top: 128px; right: 4px; transform: rotate(9deg); }
+    .phone-three { right: 130px; bottom: 0; width: 165px; transform: rotate(-2deg); }
+    .mandarin-screen { position: relative; height: 100%; background: #fff8ed; }
+    .mandarin-screen img { height: 55%; }
+    .mock-content { padding: 16px 13px; }
+    .mock-kicker { margin: 0; color: #a85328; font-size: .58rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+    .mock-title { margin: 5px 0 8px; font-size: 1.02rem; line-height: 1.1; }
+    .mock-line { height: 7px; margin-top: 7px; border-radius: 99px; background: #e8d8c7; }
+    .mock-line.short { width: 67%; }
+    .deen-screen { height: 100%; padding-top: 28px; background: #f8f4e9; }
+    .deen-hero { height: 34%; background: url('images/aia-deen-hero.webp') center / cover; }
+    .deen-icon { position: relative; z-index: 2; width: 64px !important; height: 64px !important; margin: -31px auto 0; border: 4px solid #f8f4e9; border-radius: 18px; }
+    .deen-copy { padding: 14px; text-align: center; }
+    .deen-copy h3 { margin: 0; color: #125643; font-size: 1rem; }
+    .prayer-row { display: flex; justify-content: space-between; margin-top: 14px; padding: 10px; border-radius: 12px; background: #e2eee5; color: #125643; font-size: .56rem; font-weight: 700; }
+    .stage-note { position: absolute; top: 8px; right: -10px; z-index: 8; padding: 10px 15px; border: 1px solid var(--ink); border-radius: 999px; background: var(--orange); color: var(--ink); font-size: .75rem; font-weight: 850; transform: rotate(7deg); box-shadow: 3px 3px 0 var(--ink); }
+    .marquee { overflow: hidden; border-block: 1px solid var(--ink); background: var(--acid); }
+    .marquee-track { display: flex; width: max-content; animation: marquee 26s linear infinite; }
+    .marquee-group { display: flex; align-items: center; gap: 28px; padding: 15px 14px; white-space: nowrap; font-size: .82rem; font-weight: 820; letter-spacing: .08em; text-transform: uppercase; }
+    .marquee-group span::after { padding-left: 28px; content: "✦"; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    section { padding: 104px 0; }
+    .section-head { display: grid; grid-template-columns: 1fr .7fr; gap: 40px; align-items: end; margin-bottom: 46px; }
+    .section-head h2 { max-width: 780px; margin: 0; font-size: clamp(2.6rem, 5vw, 5rem); line-height: .98; letter-spacing: -.06em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 1.02rem; }
+    .projects { display: grid; gap: 28px; }
+    .project { display: grid; grid-template-columns: 1fr 1fr; min-height: 620px; overflow: hidden; border: 1px solid var(--ink); border-radius: var(--radius); background: var(--white); box-shadow: 8px 8px 0 rgba(16,17,15,.12); }
+    .project:nth-child(even) .project-visual { order: 2; }
+    .project-visual { position: relative; display: grid; min-height: 520px; place-items: center; overflow: hidden; isolation: isolate; }
+    .project-visual::before { position: absolute; inset: 22px; border: 1px solid rgba(16,17,15,.18); border-radius: 22px; content: ""; z-index: -1; }
+    .visual-mandarin { background: #ff805f; } .visual-pt { background: #cfc0fb; } .visual-deen { background: #a9d6c5; }
+    .project-number { position: absolute; top: 30px; left: 34px; font-family: Georgia, serif; font-size: 1.05rem; font-style: italic; }
+    .phone { position: relative; width: min(57%, 288px); aspect-ratio: 9 / 18.8; overflow: hidden; border: 7px solid var(--ink); border-radius: 46px; background: #fff; box-shadow: 18px 20px 0 rgba(16,17,15,.2); transform: rotate(-3deg); }
+    .phone::after { position: absolute; top: 10px; left: 50%; z-index: 5; width: 76px; height: 18px; border-radius: 999px; background: var(--ink); content: ""; transform: translateX(-50%); }
+    .phone > img { width: 100%; height: 100%; object-fit: cover; }
+    .visual-pt .phone { transform: rotate(3deg); }
+    .visual-pt .phone > img { object-position: top; }
+    .app-screen { height: 100%; padding-top: 28px; background: #fff8ed; }
+    .app-cover { position: relative; height: 48%; overflow: hidden; }
+    .app-cover img { width: 100%; height: 100%; object-fit: cover; }
+    .app-cover::after { position: absolute; inset: auto 0 0; height: 35%; background: linear-gradient(transparent, #fff8ed); content: ""; }
+    .app-body { padding: 18px; }
+    .app-body .zh { margin: 0; color: #9e442d; font-family: Georgia, serif; font-size: 1.35rem; }
+    .app-body h3 { margin: 6px 0 8px; font-size: 1.1rem; line-height: 1.15; }
+    .app-body p { margin: 0; color: #73655a; font-size: .7rem; }
+    .chip-row { display: flex; gap: 5px; margin-top: 12px; }
+    .tiny-chip { padding: 5px 7px; border-radius: 999px; background: #f1dfcd; color: #88432d; font-size: .5rem; font-weight: 750; }
+    .deen-full { height: 100%; padding-top: 31px; background: #f8f4e9; }
+    .deen-full .deen-hero { height: 31%; }
+    .deen-full .deen-icon { width: 82px !important; height: 82px !important; margin-top: -41px; border-radius: 23px; }
+    .deen-full .deen-copy { padding: 18px; }
+    .deen-full .deen-copy h3 { font-size: 1.25rem; }
+    .deen-full .deen-copy p { margin: 3px 0 0; color: #62726c; font-size: .66rem; }
+    .deen-full .prayer-row { margin-top: 18px; padding: 12px; }
+    .project-copy { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(38px, 6vw, 72px); }
+    .project-topline { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+    .status { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .75rem; font-weight: 760; letter-spacing: .08em; text-transform: uppercase; }
+    .status::before { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(23,107,86,.14); content: ""; }
+    .version { color: var(--muted); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .76rem; }
+    .project-title { margin: 28px 0 16px; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: .95; letter-spacing: -.06em; }
+    .project-lede { max-width: 540px; margin: 0; color: #51534e; font-size: 1.06rem; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 34px 0; }
+    .metric { padding-top: 14px; border-top: 1px solid var(--line); }
+    .metric strong { display: block; font-size: 1.45rem; line-height: 1.1; }
+    .metric span { display: block; margin-top: 5px; color: var(--muted); font-size: .72rem; line-height: 1.35; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; color: #4f514c; font-size: .73rem; font-weight: 680; }
+    .private-note { display: flex; gap: 11px; align-items: flex-start; margin-top: 28px; padding: 14px 16px; border-radius: 14px; background: var(--paper); color: var(--muted); font-size: .77rem; }
+    .lock { flex: none; }
+    .about { background: var(--ink); color: var(--white); }
+    .about .section-head p { color: #b6b8b0; }
+    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; }
+    .manifesto { padding: clamp(32px, 6vw, 64px); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); background: #1b1d19; }
+    .manifesto blockquote { margin: 0; font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 3.7rem); line-height: 1.06; letter-spacing: -.035em; }
+    .manifesto blockquote em { color: var(--acid); }
+    .manifesto p { max-width: 650px; margin: 30px 0 0; color: #b6b8b0; }
+    .principles { display: grid; gap: 14px; }
+    .principle { padding: 26px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; }
+    .principle:nth-child(1) { background: var(--green); } .principle:nth-child(2) { background: #402f69; } .principle:nth-child(3) { background: #623326; }
+    .principle span { display: block; margin-bottom: 24px; color: rgba(255,255,255,.62); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .72rem; }
+    .principle h3 { margin: 0 0 8px; font-size: 1.22rem; }
+    .principle p { margin: 0; color: rgba(255,255,255,.72); font-size: .86rem; }
+    .other-work { background: var(--paper-2); }
+    .work-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .work-card { overflow: hidden; border: 1px solid var(--ink); border-radius: 20px; background: var(--white); transition: transform .25s ease, box-shadow .25s ease; }
+    .work-card:hover { transform: translateY(-6px); box-shadow: 6px 6px 0 var(--ink); }
+    .work-card img { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid var(--ink); }
+    .work-card-body { padding: 20px; }
+    .work-card h3 { margin: 0 0 10px; font-size: 1.05rem; line-height: 1.25; }
+    .work-card p { margin: 0 0 18px; color: var(--muted); font-size: .82rem; }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; font-weight: 780; text-underline-offset: 4px; }
+    .contact { padding-bottom: 54px; }
+    .contact-card { position: relative; overflow: hidden; padding: clamp(40px, 8vw, 90px); border: 1px solid var(--ink); border-radius: var(--radius); background: var(--acid); }
+    .contact-card::after { position: absolute; right: -80px; bottom: -180px; width: 420px; height: 420px; border: 1px solid var(--ink); border-radius: 50%; content: ""; box-shadow: 0 0 0 45px var(--orange), 0 0 0 46px var(--ink), 0 0 0 90px var(--lavender); opacity: .8; }
+    .contact-card > * { position: relative; z-index: 2; }
+    .contact-card h2 { max-width: 800px; margin: 0; font-size: clamp(3rem, 7vw, 6.7rem); line-height: .92; letter-spacing: -.07em; }
+    .contact-card p { max-width: 580px; margin: 25px 0 30px; font-size: 1.08rem; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+    footer a { text-underline-offset: 4px; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .75s ease, transform .75s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } .hero-stage { width: min(100%, 550px); margin: 0 auto; } .project { grid-template-columns: 1fr; } .project:nth-child(even) .project-visual { order: 0; } .project-visual { min-height: 560px; } .about-grid { grid-template-columns: 1fr; } .work-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 680px) {
+      .container { width: min(calc(100% - 26px), var(--max)); } .nav-links a:not(.nav-cta) { display: none; } .brand-name { display: none; }
+      .hero { padding: 55px 0 64px; } .hero h1 { font-size: clamp(3.4rem, 18vw, 5.4rem); } .hero-grid { gap: 42px; } .hero-stage { min-height: 420px; }
+      .stage-orbit { inset: 25px 8px 10px 8px; } .mini-phone { width: 142px; border-radius: 26px; } .phone-one { top: 24px; left: 4px; } .phone-two { top: 86px; right: 0; } .phone-three { right: 95px; width: 132px; } .stage-note { right: 0; }
+      .section-head { grid-template-columns: 1fr; gap: 16px; } section { padding: 76px 0; } .project-visual { min-height: 480px; } .phone { width: 63%; } .project-copy { padding: 32px 25px 36px; }
+      .metrics { gap: 6px; } .metric strong { font-size: 1.15rem; } .work-grid { grid-template-columns: 1fr; } .work-card { display: grid; grid-template-columns: 120px 1fr; }
+      .work-card img { height: 100%; min-height: 170px; border-right: 1px solid var(--ink); border-bottom: 0; } .contact-card::after { opacity: .28; }
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-bg text-slate-100 antialiased">
-  <!-- Header -->
-  <header class="mx-auto max-w-5xl px-6 py-4">
-    <nav class="flex items-center justify-between gap-6">
-      <a class="font-extrabold tracking-wide" href="#">Asyam Ikbar Ariyanto</a>
-      <div class="flex flex-wrap gap-3">
-        <a class="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" href="#projects">Projects</a>
-        <a class="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" href="#experience">Experience</a>
-        <a class="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" href="#contact">Contact</a>
-        <a class="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" target="_blank" rel="noopener" href="https://github.com/Ikbar1">GitHub</a>
-      </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="siteHeader">
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Asyam Ikbar Ariyanto, home"><span class="brand-mark" aria-hidden="true">AI</span><span class="brand-name">Asyam Ikbar Ariyanto</span></a>
+      <div class="nav-links"><a href="#apps">Apps</a><a href="#approach">Approach</a><a href="#other-work">Web work</a><a class="nav-cta" href="#contact">Let's talk</a></div>
     </nav>
   </header>
-
-  <main class="mx-auto max-w-5xl px-6">
-    <!-- Hero (no profile image) -->
-    <section class="py-7">
-      <div class="rounded-2xl border border-border bg-surface p-6">
-        <h1 class="mb-2 text-[clamp(28px,4vw,44px)] font-bold leading-tight">Web & Mobile Developer</h1>
-        <p class="mb-5 text-slate-400">
-          I build practical web and mobile applications, including internal systems. I’m comfortable working end-to-end—from UI development to API and database integration. I care about efficient, reliable, and easy-to-use products.
-        </p>
-        <div class="mb-3 flex flex-wrap gap-2">
-          <span class="rounded-full border border-border px-3 py-1 text-sm text-slate-400">Flutter</span>
-          <span class="rounded-full border border-border px-3 py-1 text-sm text-slate-400">React</span>
-          <span class="rounded-full border border-border px-3 py-1 text-sm text-slate-400">Java</span>
-          <span class="rounded-full border border-border px-3 py-1 text-sm text-slate-400">MySQL / PostgreSQL</span>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Android & web developer · Indonesia</p>
+          <h1>Useful apps,<br><em>thoughtfully</em><br>made.</h1>
+          <p class="hero-copy">I design and build focused digital products for learning, fitness, faith, and the everyday routines around them.</p>
+          <div class="hero-actions"><a class="button primary" href="#apps">Explore the apps <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="mailto:workwithikbar@gmail.com">workwithikbar@gmail.com</a></div>
         </div>
-        <div class="mt-3 flex gap-3">
-          <a class="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" href="#projects">See Projects</a>
-          <a class="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" href="#contact">Get in Touch</a>
+        <div class="hero-stage" aria-label="A preview of MandarinKu, PT Companion, and AIA Deen">
+          <div class="stage-orbit" aria-hidden="true"></div><div class="stage-note">3 apps · 100% offline</div>
+          <div class="mini-phone phone-one" aria-hidden="true"><div class="mandarin-screen"><img src="images/mandarinku-cover.jpg" alt="" /><div class="mock-content"><p class="mock-kicker">MandarinKu</p><p class="mock-title">小猫学汉字</p><div class="mock-line"></div><div class="mock-line short"></div></div></div></div>
+          <div class="mini-phone phone-two" aria-hidden="true"><img src="images/pt-companion-screen.jpg" alt="" /></div>
+          <div class="mini-phone phone-three" aria-hidden="true"><div class="deen-screen"><div class="deen-hero"></div><img class="deen-icon" src="images/aia-deen-icon.webp" alt="" /><div class="deen-copy"><h3>AIA Deen</h3><div class="prayer-row"><span>Subuh</span><span>04:37</span></div></div></div></div>
         </div>
       </div>
     </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-5">
-      <div class="mb-4 flex items-end justify-between">
-        <h2 class="text-2xl font-semibold">Selected Projects</h2>
-        <small class="text-slate-400">Highlights from client and personal work</small>
-      </div>
-      <div id="projectGrid" class="grid grid-cols-12 gap-4"><!-- Cards injected by JS --></div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="py-5">
-      <div class="mb-4">
-        <h2 class="text-2xl font-semibold">Experience</h2>
-      </div>
-      <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-12 grid grid-cols-1 gap-4 rounded-2xl border border-border bg-surface p-4 md:grid-cols-[1fr,3fr]">
-          <div>
-            <h3 class="font-semibold">Freelance Developer</h3>
-            <small class="text-slate-400">2023 — Present</small>
-          </div>
-          <div>
-            <p class="text-slate-300">
-              Built internal web/mobile apps including IoT integrations (MQTT), scoring system (Flutter), and institutional websites.
-              Focus on modular architecture, accessibility, and SEO best practices.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-span-12 grid grid-cols-1 gap-4 rounded-2xl border border-border bg-surface p-4 md:grid-cols-[1fr,3fr]">
-          <div>
-            <h3 class="font-semibold">Foundations & Companies (Formal Roles)</h3>
-            <small class="text-slate-400">2021 — 2023</small>
-          </div>
-          <div>
-            <p class="text-slate-300">
-              Maintained institutional websites, automated reports, and handled light server maintenance.
-              Worked cross-functionally with clear SOPs and timelines.
-            </p>
-          </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Offline-first</span><span>Material 3</span><span>Product thinking</span></div><div class="marquee-group"><span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Offline-first</span><span>Material 3</span><span>Product thinking</span></div></div></div>
+    <section id="apps">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">Featured apps</p><h2>Built around real needs, not feature lists.</h2></div><p>Three private Android products, each researched, designed, coded, and iterated from the ground up.</p></div>
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project-visual visual-mandarin"><span class="project-number">01 / 03</span><div class="phone" aria-label="MandarinKu app preview"><div class="app-screen"><div class="app-cover"><img src="images/mandarinku-cover.jpg" alt="Illustration from a MandarinKu short story showing a cat learning Hanzi" /></div><div class="app-body"><p class="zh">小猫学汉字</p><h3>The cat learns Hanzi</h3><p>Read with Hanzi, pinyin, Indonesian meaning, and audio.</p><div class="chip-row"><span class="tiny-chip">HSK 1</span><span class="tiny-chip">Story</span><span class="tiny-chip">Audio</span></div></div></div></div></div>
+            <div class="project-copy"><div><div class="project-topline"><span class="status">Active private project</span><span class="version">v1.8.1</span></div><h3 class="project-title">MandarinKu</h3><p class="project-lede">A reading-first Mandarin companion for Indonesian learners. Practical dialogues, short stories, sentence patterns, a pocket dictionary, and audio all work completely offline—without streak anxiety or mandatory daily goals.</p><div class="metrics" aria-label="MandarinKu highlights"><div class="metric"><strong>300</strong><span>HSK words</span></div><div class="metric"><strong>53</strong><span>dialogues & stories</span></div><div class="metric"><strong>22</strong><span>sentence patterns</span></div></div><div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Room</span><span class="tag">Text-to-Speech</span><span class="tag">SRS</span></div></div><div class="private-note"><span class="lock" aria-hidden="true">◉</span><span>Designed as a personal offline app. Source code and APK are currently private.</span></div></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-visual visual-pt"><span class="project-number">02 / 03</span><div class="phone"><img src="images/pt-companion-screen.jpg" alt="PT Companion screen explaining a fitness myth with evidence and practical coaching tabs" /></div></div>
+            <div class="project-copy"><div><div class="project-topline"><span class="status">Active private project</span><span class="version">v0.10.0</span></div><h3 class="project-title">PT Companion</h3><p class="project-lede">An evidence-aware learning and decision-support toolkit for aspiring Personal Trainers. It brings exercises, anatomy, health topics, assessment, program planning, and client-safe guidance into one searchable offline workspace.</p><div class="metrics" aria-label="PT Companion highlights"><div class="metric"><strong>41</strong><span>exercises</span></div><div class="metric"><strong>17</strong><span>learning modules</span></div><div class="metric"><strong>29</strong><span>core references</span></div></div><div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Room</span><span class="tag">Local search</span><span class="tag">Evidence UX</span></div></div><div class="private-note"><span class="lock" aria-hidden="true">◉</span><span>Built as a personal study companion, with guardrails that keep education separate from diagnosis or medical advice.</span></div></div>
+          </article>
+          <article class="project reveal">
+            <div class="project-visual visual-deen"><span class="project-number">03 / 03</span><div class="phone" aria-label="AIA Deen app preview"><div class="deen-full"><div class="deen-hero"></div><img class="deen-icon" src="images/aia-deen-icon.webp" alt="AIA Deen app icon" /><div class="deen-copy"><h3>AIA Deen</h3><p>Your daily offline companion</p><div class="prayer-row"><span>Subuh<br>04:37</span><span>Dzuhur<br>11:52</span><span>Maghrib<br>17:58</span></div></div></div></div></div>
+            <div class="project-copy"><div><div class="project-topline"><span class="status">Active private project</span><span class="version">v1.5.1</span></div><h3 class="project-title">AIA Deen</h3><p class="project-lede">An Indonesian Islamic companion that keeps Qur'an reading, selected hadith, prayer times, the Hijri calendar, and qibla direction available without a server or internet permission. Personal data and reading progress stay on the device.</p><div class="metrics" aria-label="AIA Deen highlights"><div class="metric"><strong>6,236</strong><span>Qur'an verses</span></div><div class="metric"><strong>200</strong><span>selected hadith</span></div><div class="metric"><strong>0</strong><span>internet permission</span></div></div><div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Offline data</span><span class="tag">Prayer calculation</span><span class="tag">Qibla</span></div></div><div class="private-note"><span class="lock" aria-hidden="true">◉</span><span>Built for personal use with transparent source notes for Qur'an text, translation, tajwid, and hadith content.</span></div></div>
+          </article>
         </div>
       </div>
     </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-5">
-      <div class="mb-4">
-        <h2 class="text-2xl font-semibold">Contact</h2>
+    <section class="about" id="approach">
+      <div class="container"><div class="section-head reveal"><div><p class="eyebrow">How I work</p><h2>Product thinking, all the way down.</h2></div><p>I care about what belongs in a product, what should stay out, and how every detail helps the person using it.</p></div>
+        <div class="about-grid"><div class="manifesto reveal"><blockquote>Software should feel <em>calm, clear,</em> and quietly capable.</blockquote><p>I work end-to-end—from defining the product and structuring content to implementing the interface, local data, testing, and release build.</p></div><div class="principles"><article class="principle reveal"><span>01 — FOCUS</span><h3>Purpose before features</h3><p>Every screen should earn its place and support the product's main job.</p></article><article class="principle reveal"><span>02 — ACCESS</span><h3>Useful without a signal</h3><p>Offline-first architecture keeps essential tools fast, private, and dependable.</p></article><article class="principle reveal"><span>03 — TRUST</span><h3>Evidence made readable</h3><p>Complex source material becomes clear, scoped guidance without overstating claims.</p></article></div></div>
       </div>
-      <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-12 grid grid-cols-1 gap-4 rounded-2xl border border-border bg-surface p-4 md:grid-cols-[1fr,3fr]">
-          <div>
-            <h3 class="font-semibold">Email</h3>
-            <small class="text-slate-400">Fast response</small>
-          </div>
-          <div>
-            <p class="text-slate-300">
-              Reach me at
-              <a class="underline underline-offset-4 hover:opacity-80" href="mailto:workwithikbar@gmail.com">workwithikbar@gmail.com</a>
-              or via
-              <a class="underline underline-offset-4 hover:opacity-80" href="https://github.com/Ikbar1" target="_blank" rel="noopener">GitHub</a>.
-            </p>
-          </div>
+    </section>
+    <section class="other-work" id="other-work">
+      <div class="container"><div class="section-head reveal"><div><p class="eyebrow">Selected web work</p><h2>Earlier projects across web and mobile.</h2></div><p>Client sites, internal tools, and experiments that shaped how I approach practical software.</p></div>
+        <div class="work-grid">
+          <article class="work-card reveal"><img src="images/VoST.jpg" alt="VoST volleyball statistics app interface" loading="lazy" /><div class="work-card-body"><h3>VoST — Volleyball Statistics</h3><p>Match event tracking, line-up management, and PDF/Excel reporting in Flutter.</p><span class="text-link">Flutter · SQLite</span></div></article>
+          <article class="work-card reveal"><img src="images/ranusa.png" alt="Ranusa Automation corporate website" loading="lazy" /><div class="work-card-body"><h3>Ranusa Automation</h3><p>Corporate website with product, service, and contact journeys.</p><a class="text-link" href="https://ranusa-automation.com" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a></div></article>
+          <article class="work-card reveal"><img src="images/yayasan.png" alt="Al Amanah Al Khoeriyah foundation website" loading="lazy" /><div class="work-card-body"><h3>Al Amanah Al Khoeriyah</h3><p>An education foundation site for school information and news.</p><a class="text-link" href="https://alamanahalkhoeriyah.com" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a></div></article>
+          <article class="work-card reveal"><img src="images/ponpes.png" alt="Al Amanah Al Islami Islamic boarding school website" loading="lazy" /><div class="work-card-body"><h3>Al Amanah Al Islami</h3><p>A boarding school website covering programs, updates, and admissions information.</p><a class="text-link" href="https://alamanahalislami.sch.id" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a></div></article>
         </div>
       </div>
     </section>
-
-    <footer class="py-6 text-sm text-slate-400">
-      © <span id="year"></span> Asyam Ikbar Ariyanto. Built with Tailwind CSS & GitHub Pages.
-    </footer>
+    <section class="contact" id="contact"><div class="container"><div class="contact-card reveal"><p class="eyebrow">Have a useful idea?</p><h2>Let's turn it into something real.</h2><p>I'm open to thoughtful Android and web projects, especially products that simplify a real workflow or make useful knowledge easier to access.</p><div class="hero-actions"><a class="button primary" href="mailto:workwithikbar@gmail.com">Send an email <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="https://github.com/Ikbar1" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div><footer><span>© <span id="year"></span> Asyam Ikbar Ariyanto</span><span>Designed & built in Indonesia · <a href="#top">Back to top ↑</a></span></footer></div></section>
   </main>
-
   <script>
-
     document.getElementById('year').textContent = new Date().getFullYear();
-
- 
-    const projects = [
-      {
-        title: 'VoST (Volleyball Statistic Team)',
-        desc: 'Flutter-based volleyball scoring app with SQLite, supporting real-time event tracking, team line-up management, and data export to PDF and Excel for match reporting.',
-        image: 'images/VoST.jpg',
-        tags: ['Flutter', 'SQLite', 'PDF', 'Excel Export'],
-        link: '#',
-        code: '#'
-      },
-      {
-        title: 'Ranusa Automation Website',
-        desc: 'Corporate website built with WordPress for Ranusa Automation, featuring product showcase, service details, and contact integration.',
-        image: 'images/ranusa.png',
-        tags: ['WordPress', 'SEO', 'Corporate Website'],
-        link: 'https://ranusa-automation.com'
-      },
-      {
-        title: 'Yayasan Al Amanah Al Khoeriyah Website',
-        desc: 'Institutional website developed with WordPress for Al Amanah Al Khoeriyah Foundation, focusing on school information, news updates, and SEO optimization.',
-        image: 'images/yayasan.png',
-        tags: ['WordPress', 'SEO', 'Education'],
-        link: 'https://alamanahalkhoeriyah.com'
-      },
-      {
-        title: 'Pondok Pesantren Al Amanah Al Islami Website',
-        desc: 'Official website for Al Amanah Al Islami Islamic Boarding School built with WordPress, providing academic programs, news, and contact information.',
-        image: 'images/ponpes.png',
-        tags: ['WordPress', 'SEO', 'Education'],
-        link: 'https://alamanahalislami.sch.id'
-      },
-    ];
-
-    // Primary action label
-    function primaryLabel(p){
-      if (!p.link || p.link === '#') return 'View App';
-      if (p.tags && p.tags.map(t => t.toLowerCase()).includes('wordpress')) return 'Visit Site';
-      return 'View App';
-    }
-
-    const grid = document.getElementById('projectGrid');
-    projects.forEach(p=>{
-      const el = document.createElement('article');
-      el.className = 'col-span-12 md:col-span-6 rounded-2xl border border-border bg-surface overflow-hidden flex flex-col';
-      el.innerHTML = `
-        <img class="h-44 w-full object-cover bg-black/50" src="${p.image}" alt="${p.title}" loading="lazy"/>
-        <div class="p-4">
-          <h3 class="mb-1 text-lg font-semibold">${p.title}</h3>
-          <p class="mb-2 text-slate-400">${p.desc}</p>
-          <div class="flex flex-wrap gap-2">
-            ${(p.tags || []).map(t=>`<span class="inline-block rounded-full border border-border px-2.5 py-1 text-xs text-slate-400">${t}</span>`).join('')}
-          </div>
-        </div>
-        <div class="mt-auto flex gap-3 p-4">
-          ${p.link ? `<a class="inline-block rounded-lg border border-border px-3 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" target="_blank" rel="noopener" href="${p.link}">${primaryLabel(p)}</a>` : ''}
-          ${p.code ? `<a class="inline-block rounded-lg border border-border px-3 py-2 hover:ring-4 hover:ring-indigo-500/20 transition" target="_blank" rel="noopener" href="${p.code}">Source Code</a>` : ''}
-        </div>
-      `;
-      grid.appendChild(el);
-    });
+    const header = document.getElementById('siteHeader');
+    const setHeaderState = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    setHeaderState(); window.addEventListener('scroll', setHeaderState, { passive: true });
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion || !('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach((item) => item.classList.add('visible')); }
+    else { const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.12 }); document.querySelectorAll('.reveal').forEach((item) => observer.observe(item)); }
   </script>
-
-  <!-- Structured Data (SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Asyam Ikbar Ariyanto",
-    "url": "https://Ikbar1.github.io/",
-    "jobTitle": "Web & Mobile Developer",
-    "knowsAbout": ["Flutter","React","Java","MySQL","PostgreSQL","MQTT","WordPress"],
-    "sameAs": ["https://github.com/Ikbar1"]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Asyam Ikbar Ariyanto","url":"https://ikbar1.github.io/","email":"mailto:workwithikbar@gmail.com","jobTitle":"Android & Web Developer","knowsAbout":["Kotlin","Jetpack Compose","Room","Flutter","WordPress","Offline-first applications"],"sameAs":["https://github.com/Ikbar1"]}</script>
 </body>
 </html>
