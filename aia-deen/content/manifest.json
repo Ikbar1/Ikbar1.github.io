@@ -1,8 +1,8 @@
 {
-  "contentVersion": 2,
+  "contentVersion": 3,
   "minimumAppVersionCode": 26,
-  "downloadUrl": "https://ikbar1.github.io/aia-deen/content/content-v2.zip",
-  "sha256": "217f4fc8e6aceaec67d6e6f961a482fb4b6e13924b55f22549d1b80aa3ff4a73",
-  "sizeBytes": 2469417,
-  "notes": "Dukungan pembaruan konten AIA Deen mulai tersedia. Konten tetap sama dengan data bawaan aplikasi."
+  "downloadUrl": "https://ikbar1.github.io/aia-deen/content/content-v3.zip",
+  "sha256": "cefeb548d806df10987212fbbcd0669f8f31417117b582017d728870e8c2daa2",
+  "sizeBytes": 2469710,
+  "notes": "Tambahan hadis sahih tentang menyampaikan cinta kepada saudara karena Allah. Total koleksi menjadi 201 hadis."
 }
