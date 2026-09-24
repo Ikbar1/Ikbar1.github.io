@@ -1,0 +1,14 @@
+AIA Deen - sumber paket konten
+
+Al-Qur'an Arab: Tanzil Project, Uthmani Hafs v1.0.2.
+Tanda waqaf: Tanzil Uthmani v1.1.
+Terjemahan Indonesia: Kementerian Agama RI melalui QuranEnc.
+Anotasi tajwid: cpfair/quran-tajweed, CC BY 4.0.
+Hadis Arab dan Indonesia: HadeethEnc Indonesia v1.22.0.
+Penjelasan pilihan: ringkasan dengan rujukan Al-Mukhtasar di QuranEnc dan HadeethEnc.
+Doa: ayat Al-Qur'an lokal dan hadis yang sumbernya dicantumkan pada setiap entri.
+
+Rincian sumber, versi data, dan tautan atribusi tersedia pada halaman
+Pengaturan > Tentang Aplikasi & Sumber di AIA Deen.
+
+Pemberitahuan lengkap teks Tanzil terdapat dalam TANZIL_NOTICE.txt.
