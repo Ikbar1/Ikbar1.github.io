@@ -1,8 +1,8 @@
 {
-  "contentVersion": 3,
+  "contentVersion": 4,
   "minimumAppVersionCode": 26,
-  "downloadUrl": "https://ikbar1.github.io/aia-deen/content/content-v3.zip",
-  "sha256": "cefeb548d806df10987212fbbcd0669f8f31417117b582017d728870e8c2daa2",
-  "sizeBytes": 2469710,
-  "notes": "Tambahan hadis sahih tentang menyampaikan cinta kepada saudara karena Allah. Total koleksi menjadi 201 hadis."
+  "downloadUrl": "https://ikbar1.github.io/aia-deen/content/content-v4.zip",
+  "sha256": "f0362b1c45cd45175f969a30c535e0550d57369d783513c27469ac9b7d60e626",
+  "sizeBytes": 2471182,
+  "notes": "Tafsir ringkas Al-Baqarah ayat 1-20, dapat dibaca offline."
 }
