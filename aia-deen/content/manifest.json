@@ -4,5 +4,9 @@
   "downloadUrl": "https://ikbar1.github.io/aia-deen/content/content-v4.zip",
   "sha256": "f0362b1c45cd45175f969a30c535e0550d57369d783513c27469ac9b7d60e626",
   "sizeBytes": 2471182,
-  "notes": "Tafsir ringkas Al-Baqarah ayat 1-20, dapat dibaca offline."
+  "notes": "Tafsir ringkas Al-Baqarah ayat 1-20, dapat dibaca offline.",
+  "contentSchemaVersion": 1,
+  "keyId": "content-rsa-2026-09",
+  "signedPayload": "eyJjb250ZW50VmVyc2lvbiI6NCwiY29udGVudFNjaGVtYVZlcnNpb24iOjEsIm1pbmltdW1BcHBWZXJzaW9uQ29kZSI6MjYsImRvd25sb2FkVXJsIjoiaHR0cHM6Ly9pa2JhcjEuZ2l0aHViLmlvL2FpYS1kZWVuL2NvbnRlbnQvY29udGVudC12NC56aXAiLCJzaGEyNTYiOiJmMDM2MmIxYzQ1Y2Q0NTE3NWY5NjlhMzBjNTM1ZTA1NTBkNTczNjlkNzgzNTEzYzI3NDY5YWM5YjdkNjBlNjI2Iiwic2l6ZUJ5dGVzIjoyNDcxMTgyLCJub3RlcyI6IlRhZnNpciByaW5na2FzIEFsLUJhcWFyYWggYXlhdCAxLTIwLCBkYXBhdCBkaWJhY2Egb2ZmbGluZS4ifQ==",
+  "signature": "aUkwlPi2GbKx4hbNQEU18dUNLjgUipGLMZ3BryJAd4nODfXxcVBfUz+HIJHm7RlZXCUSBwR6/aHGf8gj+okvmQKV98gSxVWl6MztXM+UoNauDNZ8Kd/qT8PS8dCDVb3wpRUZKhKxbIfa9ATNK7fy7k9wdJHqm1+SWyzGXCMnbOHDXToB6EZdSEP4yEtOKpeIUwGg8PcdtVC15uf1IxmnpKJykHUp+Eek6/cDaKrhVoTHCVcBZapIfKLtv4siRyvrY1FH8ga1h5KRXs35Ms4e12WwCcOyXsAGAYh2QEqpoHQydZ9hZinb8VBv7ZWgyM9gUwMp5XX0JmtQyQrDZgt5YIVZ8CJsuIcrrOSTsZhVTXz21j/S3neKqychvKs/Zqdl724jcMvHpjU4/hG2cNhByKVKXl0q2OuaOZiBGq+Kbdsa0oD+xz06WAxv3r3O1wjKcw6n+kGkT1ic9qF5ZAB/2BQey2hQMhY7DWugWc31IJYHPL71oT7x1sM7bQ4/MAFE"
 }
